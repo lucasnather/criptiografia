@@ -1,0 +1,17 @@
+
+
+services:
+  postgresql:
+    image: 'bitnami/postgresql:latest'
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_DATABASE=criptografia
+      - POSTGRESQL_PASSWORD=natherzito
+      - POSTGRESQL_USERNAME=lucasnather
+    networks:
+      - criptografia
+
+networks:
+  criptografia:
+    driver: bridge
